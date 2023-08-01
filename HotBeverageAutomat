@@ -1,0 +1,12 @@
+public class HotBeverageAutomat extends Automat {
+    public void initProduct(List<Product> myList2) {
+        listProduct2 = MyList2;
+    }
+    public Product getProduct(String name, int volume, int temperature) {
+        for (Product el : listProduct) {
+            if (el.getName().equals(name) && ((Beverage) el).getVolume() == volume && ((HotBeverage) el).getTemperature() == temperature)
+                return el;
+        }
+        return null;
+    }
+}
