@@ -1,10 +1,11 @@
 import java.util.Calendar;
 
-abstract class Product {
-    private String name;
-    private int price;
-    private int quantity;
-    private Calendar bestBefore;
+public abstract class Product {
+
+    public String name;
+    public int price;
+    public int quantity;
+    public Calendar bestBefore;
 
     public Product(String name, int price, int quantity, Calendar bestBefore) {
         this.name = name;
@@ -48,7 +49,7 @@ abstract class Product {
     @Override
     public String toString() {
         return "Product [name=" + name + ", price=" + price + ", quantity=" + quantity + ", bestBefore="
-                + bestBefore.get(Calendar.YEAR) + "/" + bestBefore.get(Calendar.MONTH) + "/"
-                + bestBefore.get(Calendar.DAY_OF_MONTH) + "]";
+                + bestBefore.get(Calendar.YEAR) + "/" + bestBefore.get(Calendar.MONTH) + "]";
     }
+
 }

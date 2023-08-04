@@ -1,12 +1,22 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class HotBeverageAutomat extends Automat {
-    public void initProduct(List<Product> myList2) {
-        listProduct2 = MyList2;
+    List<HotBeverage> listProduct = new ArrayList<>();
+
+    public void initHotBeverage(List<HotBeverage> myList2) {
+      listProduct = myList2;
     }
-    public Product getProduct(String name, int volume, int temperature) {
-        for (Product el : listProduct) {
-            if (el.getName().equals(name) && ((Beverage) el).getVolume() == volume && ((HotBeverage) el).getTemperature() == temperature)
+
+
+    public HotBeverage getProduct(String name, double volume, int temp) {
+        for (HotBeverage el : listProduct) {
+            if (el.getName().equals(name) && el.getVolume() == volume && el.getTemp() == temp) {
                 return el;
+            }
         }
         return null;
     }
+
+
 }

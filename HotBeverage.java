@@ -1,27 +1,24 @@
 import java.util.Calendar;
 
 public class HotBeverage extends Beverage {
-    private int temperature;
+    public int temp;
 
-    public HotBeverage(String name, int price, int quantity, Calendar bestBeforeDate, int volume, int temperature) {
-        super(name, price, quantity, bestBeforeDate, volume);
-        this.temperature = temperature;
+    public HotBeverage(String name, int price, int quantity, Calendar bestBefore, double volume, int temp) {
+        super(name, price, quantity, bestBefore, volume);
+        this.temp = temp;
     }
 
-    public int getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
+    public int getTemp() {
+        return temp;
     }
 
     @Override
     public String toString() {
-        return "HotBeverage [name=" + getName() + ", price=" + getPrice() + ", quantity=" + getQuantity()
+        return "Product [name=" + name + ", volume=" + volume + ", temperature=" + temp + ", price=" + price
+                + ", quantity="
+                + quantity
                 + ", bestBefore="
-                + getBestBefore().get(Calendar.YEAR) + "/" + getBestBefore().get(Calendar.MONTH) + "/"
-                + getBestBefore().get(Calendar.DAY_OF_MONTH) + ", volume=" + getVolume() + ", temperature="
-                + temperature + "]";
+                + bestBefore.get(Calendar.YEAR) + "/" + bestBefore.get(Calendar.MONTH) + "]";
     }
+
 }
